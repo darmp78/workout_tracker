@@ -1,3 +1,99 @@
-body{
-    background-color: aquamarine;
+/* Imports */
+/* Variables */
+header .container-fluid {
+  padding: 3% 10%;
 }
+
+main .container-fluid {
+  padding: 5% 10%;
+}
+main .container-fluid div div .main-container-login {
+  position: absolute;
+  width: 415px;
+  height: 576px;
+  left: 16%;
+  top: 20%;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 10px 7px 24.9px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+main .container-fluid div div .main-container-login h1 {
+  padding: 30px 30px 10px 30px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+  color: #3C3C3C;
+}
+main .container-fluid div div .main-container-login h1 .sec-color-text {
+  color: #FE4A27;
+}
+main .container-fluid div div .main-container-login h2 {
+  padding: 0 30px 10px 30px;
+  font-size: 15px;
+  text-align: center;
+  color: #3C3C3C;
+}
+main .container-fluid div div .main-container-login h3 {
+  padding: 10px 30px 10px;
+  font-size: 14px;
+  text-align: start;
+  color: #3C3C3C;
+}
+main .container-fluid div div .main-container-login .form-control-text-input {
+  margin: 0 30px 20px 30px;
+  width: 355px;
+}
+main .container-fluid div div .main-container-login .form-control-text-input:focus {
+  border: 1px solid #FE4A27;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #FE4A27;
+}
+main .container-fluid div div .main-container-login div div .form-control-text-input-md {
+  margin: 0 30px 20px 30px;
+  width: 169px;
+}
+main .container-fluid div div .main-container-login div div .form-control-text-input-md:focus {
+  border: 1px solid #FE4A27;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #FE4A27;
+}
+main .container-fluid div div .main-container-login div .col-container-right-cont {
+  padding-left: 7px;
+}
+main .container-fluid div div .main-container-login div .col-container-right-cont .form-control-select-input-md, main .container-fluid div div .main-container-login div .col-container-right-cont .form-control-text-input-md {
+  margin: 0;
+  width: 169px;
+}
+main .container-fluid div div .main-container-login div .col-container-right-cont .form-control-select-input-md:focus, main .container-fluid div div .main-container-login div .col-container-right-cont .form-control-text-input-md:focus {
+  border: 1px solid #FE4A27;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #FE4A27;
+}
+main .container-fluid div div .main-container-login h4 {
+  padding: 0 30px 10px 30px;
+  text-align: start;
+  font-size: 11px;
+  font-weight: 500;
+  color: #9F9F9F;
+}
+main .container-fluid div div .main-container-login .a-btn-nav-login {
+  left: 65px;
+  position: absolute;
+  width: 285px;
+  height: 42px;
+  background-color: #FE4A27;
+  color: white;
+  border-radius: 6px;
+  border: 1px solid #FE975B;
+}
+main .container-fluid div div .main-container-login .a-btn-nav-login:hover {
+  background-color: rgba(254, 74, 39, 0.8);
+}
+
+body {
+  background: radial-gradient(50% 50% at 50% 50%, rgba(201, 206, 212, 0.09) 49%, rgba(195, 199, 208, 0.67) 100%);
+}
+
+body {
+  background-image: url("../images/unsplash_d3bYmnZ0ank.png");
+  background-size: cover;
+}
+
+/*# sourceMappingURL=styles.css.map */

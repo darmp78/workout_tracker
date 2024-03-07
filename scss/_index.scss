@@ -1,0 +1,119 @@
+header {
+    .container-fluid {
+        padding: 3% 10%;
+    }
+}
+
+main {
+    .container-fluid {
+        padding: 5% 10%;
+
+        div {
+            div {
+                .main-container-login {
+                    position: absolute;
+                    width: 415px;
+                    height: 576px;
+                    left: 16%;
+                    top: 20%;
+                    background: rgba(255, 255, 255, 0.94);
+                    box-shadow: 10px 7px 24.9px rgba(0, 0, 0, 0.25);
+                    border-radius: 30px;
+
+                    h1 {
+                        padding: 30px 30px 10px 30px;
+                        text-align: center;
+                        font-size: 32px;
+                        font-weight: 500;
+                        color: $primaryColor;
+                        .sec-color-text{
+                            color: $secundaryColor;
+                        }
+                    }
+
+                    h2 {
+                        padding: 0 30px 10px 30px;
+                        font-size: 15px;
+                        text-align: center;
+                        color: $primaryColor;
+                    }
+
+                    h3 {
+                        padding: 10px 30px 10px;
+                        font-size: 14px;
+                        text-align: start;
+                        color: $primaryColor;
+                    }
+
+                    .form-control-text-input {
+                        margin: 0 30px 20px 30px;
+                        width: 355px;
+
+                        &:focus {
+                            border: 1px solid $secundaryColor;
+                            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $secundaryColor;
+                        }
+                    }
+
+                    div {
+                        div {
+                            .form-control-text-input-md {
+                                margin: 0 30px 20px 30px;
+                                width: 169px;
+
+                                &:focus {
+                                    border: 1px solid $secundaryColor;
+                                    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $secundaryColor;
+                                }
+                            }
+
+
+
+                        }
+
+                        .col-container-right-cont {
+                            padding-left: 7px;
+
+                            .form-control-select-input-md {
+                                margin: 0;
+                                width: 169px;
+
+                                &:focus {
+                                    border: 1px solid $secundaryColor;
+                                    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $secundaryColor;
+                                }
+
+                            }
+
+                            .form-control-text-input-md {
+                                @extend .form-control-select-input-md;
+                            }
+                        }
+                    }
+
+                    h4 {
+                        padding: 0 30px 10px 30px;
+                        text-align: start;
+                        font-size: 11px;
+                        font-weight: 500;
+                        color: $gray2;
+                    }
+
+                    .a-btn-nav-login {
+                        left: 65px;
+                        position: absolute;
+                        width: 285px;
+                        height: 42px;
+                        background-color: $secundaryColor;
+                        color: white;
+                        border-radius: 6px;
+                        border: 1px solid $thirdColor;
+                        &:hover{
+                            background-color: $secundaryColorCC;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
