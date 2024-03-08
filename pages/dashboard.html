@@ -22,7 +22,6 @@
                     <img src="../images/mainLogo.png" alt="mainLogo">
                 </div>
                 <div class="col-lg-6">
-                    <!--<button type="button"id="btnSignOff" class="btn btn-primary btn-log-off"><i class="fas fa-2x fa-power-off"></i><h4>Salir</h4></button>-->
                     <a class="btn btn-primary btn-log-off" href="../index.html"><i class="fas fa-2x fa-power-off"></i><h4>Salir</h4></a>
                 </div>
             </div>
@@ -33,7 +32,7 @@
             <div class="row">
                 <div class="col-lg-4 main-name-container">
                     <div class="name-container">
-                        <h1 id="label-full-name">Nombre Apellido</h1>
+                        <h1 id="labelFullName">Nombre Apellido</h1>
                         <p>Edad: <span class="p-regular-font-weight" id="label-age">40</span> Sexo: <span
                                 class="p-regular-font-weight" id="label-sex">Masculino</span></p>
                         <p>Fecha: <span class="p-regular-font-weight" id="label-full-today-date">Lunes 5 de marzo de
@@ -134,7 +133,13 @@
         </div>
         <p>Made with love by Darwin.</p>
     </footer>
+    <!-- My script -->
+    <script>
+        let name = localStorage.getItem("objectToPass");
+        document.getElementById("labelFullName").innerHTML = name;
+        console.log(name);
 
+    </script>
     <!-- Bootstrap script -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
