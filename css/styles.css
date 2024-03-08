@@ -5,14 +5,13 @@ header .container-fluid {
 }
 
 main .container-fluid {
-  padding: 5% 10%;
+  padding: 0 10%;
 }
 main .container-fluid div div .main-container-login {
-  position: absolute;
+  position: relative;
   width: 415px;
   height: 576px;
-  left: 16%;
-  top: 20%;
+  left: 10%;
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 10px 7px 24.9px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
@@ -61,6 +60,11 @@ main .container-fluid div div .main-container-login div .col-container-right-con
 main .container-fluid div div .main-container-login div .col-container-right-cont .form-control-select-input-md, main .container-fluid div div .main-container-login div .col-container-right-cont .form-control-text-input-md {
   margin: 0;
   width: 169px;
+  border: 1px solid #E2E2E2;
+  border-radius: 6px;
+  height: 38px;
+  padding-left: 5px;
+  color: #585C5E;
 }
 main .container-fluid div div .main-container-login div .col-container-right-cont .form-control-select-input-md:focus, main .container-fluid div div .main-container-login div .col-container-right-cont .form-control-text-input-md:focus {
   border: 1px solid #FE4A27;
@@ -87,13 +91,207 @@ main .container-fluid div div .main-container-login .a-btn-nav-login:hover {
   background-color: rgba(254, 74, 39, 0.8);
 }
 
-body {
-  background: radial-gradient(50% 50% at 50% 50%, rgba(201, 206, 212, 0.09) 49%, rgba(195, 199, 208, 0.67) 100%);
+footer {
+  text-align: center;
+  padding-bottom: 30px;
+}
+footer .icon-row {
+  font-size: 25px;
+  color: #F0F0F0;
+  margin-top: 30px;
+}
+footer .icon-row .icon-social-media {
+  margin: 0 5px;
+}
+footer .icon-row .icon-social-media:hover {
+  color: #FE4A27;
+}
+footer p {
+  color: #F0F0F0;
 }
 
-body {
+.body-dashboard {
+  background-color: #E2E2E2;
+}
+.body-dashboard .header-dashboard .container-fluid {
+  padding: 3% 10%;
+}
+.body-dashboard .header-dashboard .container-fluid div div .btn-log-off {
+  background-color: transparent;
+  border-color: transparent;
+  color: #FE4A27;
+  display: flex;
+  align-items: unset;
+  position: absolute;
+  right: 10%;
+  top: 7%;
+}
+.body-dashboard .header-dashboard .container-fluid div div .btn-log-off h4 {
+  color: #3C3C3C;
+  margin-left: 8px;
+}
+.body-dashboard main .container-fluid {
+  padding: 0 10%;
+}
+.body-dashboard main .container-fluid div .main-name-container {
+  width: 44%;
+}
+.body-dashboard main .container-fluid div .main-name-container .name-container {
+  position: relative;
+  height: 158px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 10px 7px 24.9px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+.body-dashboard main .container-fluid div .main-name-container .name-container h1 {
+  padding: 20px 0 5px 30px;
+  color: #FE4A27;
+}
+.body-dashboard main .container-fluid div .main-name-container .name-container p {
+  padding: 0 0 0px 30px;
+  margin: 0;
+  font-weight: 600;
+  color: #3C3C3C;
+}
+.body-dashboard main .container-fluid div .main-name-container .name-container p .p-regular-font-weight {
+  font-weight: 200;
+}
+.body-dashboard main .container-fluid div .main-BMI-container {
+  width: 22.6%;
+}
+.body-dashboard main .container-fluid div .main-BMI-container .BMI-container {
+  position: relative;
+  height: 158px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 10px 7px 24.9px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  text-align: center;
+}
+.body-dashboard main .container-fluid div .main-BMI-container .BMI-container h1 {
+  padding: 20px 0 0 0;
+  color: #FE4A27;
+  margin: 0;
+}
+.body-dashboard main .container-fluid div .main-BMI-container .BMI-container h2 {
+  color: #3C3C3C;
+  margin: 0;
+}
+.body-dashboard main .container-fluid div .main-BMI-container .BMI-container p {
+  color: #3C3C3C;
+  margin: 0;
+}
+.body-dashboard main .container-fluid div div .weather-container {
+  position: relative;
+  height: 158px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 10px 7px 24.9px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+.body-dashboard main .container-fluid div div .weather-container p {
+  color: #3C3C3C;
+  margin: 0;
+  padding: 10%;
+}
+.body-dashboard main .container-fluid div .main-table-workout-container {
+  width: 66.7%;
+  padding: 30px 10px;
+}
+.body-dashboard main .container-fluid div .main-table-workout-container .btn-primary {
+  position: absolute;
+  right: 7%;
+  top: 20%;
+  background-color: #FE4A27;
+  border-color: #FE975B;
+}
+.body-dashboard main .container-fluid div .main-table-workout-container .btn-primary:hover {
+  background-color: rgba(254, 74, 39, 0.8);
+}
+.body-dashboard main .container-fluid div .main-table-workout-container .table-workout-container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 10px 7px 24.9px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  padding: 20px 30px;
+}
+.body-dashboard main .container-fluid div .main-table-workout-container .table-workout-container h3 {
+  color: #FE4A27;
+}
+.body-dashboard main .container-fluid div .main-table-workout-container .table-workout-container .filters-bar {
+  width: 250px;
+  padding: 10px 0;
+}
+.body-dashboard main .container-fluid div .main-table-workout-container .table-workout-container .filters-bar .filters-bar-ico {
+  width: 15%;
+  padding-top: 5px;
+}
+.body-dashboard main .container-fluid div .main-table-workout-container .table-workout-container .filters-bar .form-control-select-input-md, .body-dashboard main .container-fluid div .main-table-workout-container .table-workout-container .filters-bar div .main-container-login div .col-container-right-cont .form-control-text-input-md, .body-dashboard main .container-fluid div div .main-container-login div .col-container-right-cont .main-table-workout-container .table-workout-container .filters-bar .form-control-text-input-md {
+  margin: 0;
+  border: 1px solid #E2E2E2;
+  border-radius: 6px;
+  height: 38px;
+  padding-left: 5px;
+  color: #585C5E;
+}
+.body-dashboard main .container-fluid div .main-table-workout-container .table-workout-container .filters-bar .form-control-select-input-md:focus, .body-dashboard main .container-fluid div .main-table-workout-container .table-workout-container .filters-bar div .main-container-login div .col-container-right-cont .form-control-text-input-md:focus, .body-dashboard main .container-fluid div div .main-container-login div .col-container-right-cont .main-table-workout-container .table-workout-container .filters-bar .form-control-text-input-md:focus {
+  border: 1px solid #FE4A27;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #FE4A27;
+}
+.body-dashboard main .container-fluid div .main-table-workout-container p {
+  padding: 10px 0;
+}
+.body-dashboard main .container-fluid div .main-table-workout-container .table-striped thead tr th {
+  color: white;
+  background-color: #FE4A27;
+}
+.body-dashboard main .container-fluid div .main-table-workout-container .table-striped thead tr .th-border-rd-left {
+  border-radius: 15px 0 0 0;
+}
+.body-dashboard main .container-fluid div .main-table-workout-container .table-striped thead tr .th-border-rd-right {
+  border-radius: 0 15px 0 0;
+}
+.body-dashboard main .container-fluid div .main-result-workout-container {
+  width: 33.3%;
+  padding: 30px 13px;
+}
+.body-dashboard main .container-fluid div .main-result-workout-container .result-workout-container {
+  position: relative;
+  height: 158px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 10px 7px 24.9px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  padding: 20px 30px;
+}
+.body-dashboard main .container-fluid div .main-result-workout-container .result-workout-container h3 {
+  color: #FE4A27;
+}
+.body-dashboard .footer-dashboard {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.body-dashboard .footer-dashboard .icon-row {
+  font-size: 25px;
+  color: #3C3C3C;
+  margin-top: 30px;
+}
+.body-dashboard .footer-dashboard .icon-row .icon-social-media {
+  margin: 0 5px;
+}
+.body-dashboard .footer-dashboard .icon-row .icon-social-media:hover {
+  color: #FE4A27;
+}
+.body-dashboard .footer-dashboard p {
+  color: #3C3C3C;
+}
+
+.body-index {
   background-image: url("../images/unsplash_d3bYmnZ0ank.png");
   background-size: cover;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */

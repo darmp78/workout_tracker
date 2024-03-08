@@ -1,3 +1,240 @@
-body{
-    background: radial-gradient(50% 50% at 50% 50%, rgba(201, 206, 212, 0.09) 49%, rgba(195, 199, 208, 0.67) 100%);
+.body-dashboard {
+    background-color: $gray4;
+
+
+    .header-dashboard {
+        .container-fluid {
+            padding: 3% 10%;
+
+            div {
+                div {
+                    .btn-log-off {
+                        background-color: transparent;
+                        border-color: transparent;
+                        color: $secundaryColor;
+                        display: flex;
+                        align-items: unset;
+                        position: absolute;
+                        right: 10%;
+                        top: 7%;
+
+                        h4 {
+                            color: $primaryColor;
+                            margin-left: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        .container-fluid {
+            padding: 0 10%;
+
+            div {
+                .main-name-container {
+                    width: 44%;
+
+                    .name-container {
+                        position: relative;
+                        height: 158px;
+                        background: rgba(255, 255, 255, 0.97);
+                        box-shadow: 10px 7px 24.9px rgba(0, 0, 0, 0.25);
+                        border-radius: 30px;
+
+                        h1 {
+                            padding: 20px 0 5px 30px;
+                            color: $secundaryColor;
+                        }
+
+                        p {
+                            padding: 0 0 0px 30px;
+                            margin: 0;
+                            font-weight: 600;
+                            color: $primaryColor;
+
+                            .p-regular-font-weight {
+                                font-weight: 200;
+                            }
+                        }
+                    }
+                }
+
+                .main-BMI-container {
+                    width: 22.6%;
+
+                    .BMI-container {
+                        position: relative;
+                        height: 158px;
+                        background: rgba(255, 255, 255, 0.97);
+                        box-shadow: 10px 7px 24.9px rgba(0, 0, 0, 0.25);
+                        border-radius: 30px;
+                        text-align: center;
+
+                        h1 {
+                            padding: 20px 0 0 0;
+                            color: $secundaryColor;
+                            margin: 0;
+                        }
+
+                        h2 {
+                            color: $primaryColor;
+                            margin: 0;
+                        }
+
+                        p {
+                            color: $primaryColor;
+                            margin: 0;
+                        }
+                    }
+
+                }
+
+                div {
+                    .weather-container {
+
+                        position: relative;
+                        height: 158px;
+                        text-align: center;
+                        background: rgba(255, 255, 255, 0.97);
+                        box-shadow: 10px 7px 24.9px rgba(0, 0, 0, 0.25);
+                        border-radius: 30px;
+
+                        p {
+                            color: $primaryColor;
+                            margin: 0;
+                            padding: 10%;
+                        }
+
+                    }
+                }
+
+                .main-table-workout-container {
+                    width: 66.7%;
+                    padding: 30px 10px;
+
+                    .btn-primary {
+                        position: absolute;
+                        right: 7%;
+                        top: 20%;
+                        background-color: $secundaryColor;
+                        border-color: $thirdColor;
+
+                        &:hover {
+                            background-color: $secundaryColorCC;
+                        }
+                    }
+
+                    .table-workout-container {
+                        position: relative;
+                        background: rgba(255, 255, 255, 0.97);
+                        box-shadow: 10px 7px 24.9px rgba(0, 0, 0, 0.25);
+                        border-radius: 30px;
+                        padding: 20px 30px;
+
+                        h3 {
+                            color: $secundaryColor;
+                        }
+
+                        .filters-bar {
+                            width: 250px;
+                            padding: 10px 0;
+
+                            .filters-bar-ico {
+                                width: 15%;
+                                padding-top: 5px;
+                            }
+
+                            .form-control-select-input-md {
+                                margin: 0;
+                                border: 1px solid $gray4;
+                                border-radius: 6px;
+                                height: 38px;
+                                padding-left: 5px;
+                                color: #585C5E;
+
+                                &:focus {
+                                    border: 1px solid $secundaryColor;
+                                    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $secundaryColor;
+                                }
+                            }
+                        }
+                    }
+
+                    p {
+                        padding: 10px 0;
+                    }
+
+                    .table-striped {
+
+                        thead {
+                            tr {
+                                th {
+                                    color: white;
+                                    background-color: $secundaryColor;
+
+                                }
+
+                                .th-border-rd-left {
+                                    border-radius: 15px 0 0 0;
+                                }
+
+                                .th-border-rd-right {
+                                    border-radius: 0 15px 0 0;
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                .main-result-workout-container {
+                    width: 33.3%;
+                    padding: 30px 13px;
+
+                    .result-workout-container {
+                        position: relative;
+                        height: 158px;
+                        background: rgba(255, 255, 255, 0.97);
+                        box-shadow: 10px 7px 24.9px rgba(0, 0, 0, 0.25);
+                        border-radius: 30px;
+                        padding: 20px 30px;
+
+                        h3 {
+                            color: $secundaryColor;
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+    }
+
+    .footer-dashboard {
+        text-align: center;
+        padding-bottom: 30px;
+
+        .icon-row {
+            font-size: 25px;
+            color: $primaryColor;
+            margin-top: 30px;
+
+            .icon-social-media {
+                margin: 0 5px;
+
+                &:hover {
+                    color: $secundaryColor;
+                }
+            }
+        }
+
+        p {
+            color: $primaryColor;
+        }
+
+    }
+
 }

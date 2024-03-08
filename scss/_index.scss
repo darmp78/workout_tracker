@@ -6,16 +6,15 @@ header {
 
 main {
     .container-fluid {
-        padding: 5% 10%;
+        padding: 0 10%;
 
         div {
             div {
                 .main-container-login {
-                    position: absolute;
+                    position: relative;
                     width: 415px;
                     height: 576px;
-                    left: 16%;
-                    top: 20%;
+                    left: 10%;
                     background: rgba(255, 255, 255, 0.94);
                     box-shadow: 10px 7px 24.9px rgba(0, 0, 0, 0.25);
                     border-radius: 30px;
@@ -77,7 +76,11 @@ main {
                             .form-control-select-input-md {
                                 margin: 0;
                                 width: 169px;
-
+                                border: 1px solid $gray4;
+                                border-radius: 6px;
+                                height: 38px;
+                                padding-left: 5px;
+                                color: #585C5E;
                                 &:focus {
                                     border: 1px solid $secundaryColor;
                                     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $secundaryColor;
@@ -116,4 +119,25 @@ main {
             }
         }
     }
+}
+footer{
+    text-align: center;
+    padding-bottom: 30px;
+    .icon-row {
+        font-size: 25px;
+        color: $gray5;
+        margin-top: 30px;
+
+        .icon-social-media {
+            margin: 0 5px;
+
+            &:hover {
+                color: $secundaryColor;
+            }
+        }
+    }
+    p{
+        color: $gray5;
+    }
+    
 }
