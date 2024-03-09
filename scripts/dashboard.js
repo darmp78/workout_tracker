@@ -10,6 +10,10 @@ const labelCalcBMI = document.getElementById("labelCalcBMI");
 const labelCalcBMIDesc = document.getElementById("labelCalcBMIDesc");
 const mainWorkoutTable = document.getElementById("mainWorkoutTable");
 const btnAAddWorkout = document.getElementById("btnAAddWorkout");
+const selectNewWorkoutName = document.getElementById("selectNewWorkoutName");
+const selectNewWorkoutDuration = document.getElementById("selectNewWorkoutDuration");
+const inputtextNewWorkoutDesc = document.getElementById("inputtextNewWorkoutDesc");
+const inputFilterWorkout = document.getElementById("inputFilterWorkout");
 
 // Get the system date
 const currentDate = new Date().toDateString();
@@ -54,36 +58,6 @@ const mainUser = new User(userData[0].fName,
     userData[0].height,
     userData[0].weight);
 
-// Create Workout
-
-let myNewWorkouts = [];
-
-
-btnAAddWorkout.onclick = function () {
-    let dataTotable = "";
-    let newWorkout = new Workout(
-        currentDate,
-        "hiit",
-        5,
-        "Alto rendimiento"
-    );
-    myNewWorkouts.push(newWorkout);
-
-    for (let i = 0; i < myNewWorkouts.length; i++) {
-        dataTotable += `<tr>
-        <td>`+ myNewWorkouts[i].date + `</th>
-        <td>
-        Boxeo
-        </td>
-        <td>5</td>
-        <td>Ejercicio de alto redimiento.</td>
-        </tr>`;
-    }
-
-    mainWorkoutTable.innerHTML = dataTotable;
-    console.log(myNewWorkouts);
-}
-
 // Set values in labels 
 function populateLabels() {
     labelFullName.innerHTML = mainUser.getFullName();
@@ -126,6 +100,72 @@ function getBMIdesc(BMI) {
     }
     return BMIDesc;
 }
+
+// Create Workout, insert and load
+
+let myNewWorkouts = [];
+
+
+btnAAddWorkout.onclick = function () {
+    let dataTotable = "";
+    let newWorkout = new Workout(
+        currentDate,
+        selectNewWorkoutName.value,
+        selectNewWorkoutDuration.value,
+        inputtextNewWorkoutDesc.value
+    );
+    myNewWorkouts.push(newWorkout);
+
+    for (let i = 0; i < myNewWorkouts.length; i++) {
+        dataTotable += `<tr>
+        <td>`+ myNewWorkouts[i].date + `</th>
+        <td>
+        `+ myNewWorkouts[i].ID + `
+        </td>
+        <td>
+        `+ myNewWorkouts[i].duration + `
+        </td>
+        <td>
+        `+ myNewWorkouts[i].description + `
+        </td>
+        </tr>`;
+    }
+
+    mainWorkoutTable.innerHTML = dataTotable;
+    console.log(myNewWorkouts);
+}
+
+// Filter workout table
+inputFilterWorkout.addEventListener("change", function(){
+    let filteredResults = [];
+    let filteredDataToTable = "";
+
+    if(inputFilterWorkout.value == "all"){
+        filteredResults = myNewWorkouts;
+    }else{
+        filteredResults = myNewWorkouts.filter((workout) => workout.ID==inputFilterWorkout.value);
+    }   
+
+    for (let i = 0; i < filteredResults.length; i++) {
+        filteredDataToTable += `<tr>
+        <td>`+ filteredResults[i].date + `</th>
+        <td>
+        `+ filteredResults[i].ID + `
+        </td>
+        <td>
+        `+ filteredResults[i].duration + `
+        </td>
+        <td>
+        `+ filteredResults[i].description + `
+        </td>
+        </tr>`;
+    }
+    mainWorkoutTable.innerHTML = filteredDataToTable;
+
+    console.log(filteredResults);
+    console.log("Change filter: "+inputFilterWorkout.value);
+});
+
 
 // Call functions
 populateLabels();
