@@ -1,6 +1,16 @@
 // Get the object from the local storage
 const userData = JSON.parse(localStorage.getItem("newUser"));
 
+//get the main HTML elements
+const labelFullName = document.getElementById("labelFullName");
+const labelAge = document.getElementById("labelAge");
+const labelGender = document.getElementById("labelGender");
+const labelFullTodayDate = document.getElementById("labelFullTodayDate");
+const labelCalcBMI = document.getElementById("labelCalcBMI");
+const labelCalcBMIDesc = document.getElementById("labelCalcBMIDesc");
+const mainWorkoutTable = document.getElementById("mainWorkoutTable");
+const btnAAddWorkout = document.getElementById("btnAAddWorkout");
+
 // Get the system date
 const currentDate = new Date().toDateString();
 
@@ -27,6 +37,15 @@ function User(fName, lName, age, gender, height, weight) {
 
 }
 
+// Create object workout
+function Workout(date, workoutID, duration, descr) {
+    this.date = date;
+    this.ID = workoutID;
+    this.duration = duration;
+    this.description = descr;
+
+}
+
 // Create user 
 const mainUser = new User(userData[0].fName,
     userData[0].lName,
@@ -35,16 +54,37 @@ const mainUser = new User(userData[0].fName,
     userData[0].height,
     userData[0].weight);
 
+// Create Workout
 
+let myNewWorkouts = [];
+
+
+btnAAddWorkout.onclick = function () {
+    let dataTotable ="";
+    let newWorkout = new Workout(
+        currentDate,
+        "hiit",
+        5,
+        "Alto rendimiento"
+    );
+    myNewWorkouts.push(newWorkout);
+
+    for (let i = 0; i < myNewWorkouts.length; i++) {
+        dataTotable +="<tr><td>"+myNewWorkouts[i].date+"</th><td>Running</td><td>5</td><td>Ejercicio de alto redimiento.</td></tr>";
+    }
+
+    mainWorkoutTable.innerHTML = dataTotable;
+    console.log(myNewWorkouts);
+}
 
 // Set values in labels 
 function populateLabels() {
-    document.getElementById("labelFullName").innerHTML = mainUser.getFullName();
-    document.getElementById("labelAge").innerHTML = mainUser.age;
-    document.getElementById("labelGender").innerHTML = mainUser.getGenderDesc();
-    document.getElementById("labelFullTodayDate").innerHTML = currentDate;
-    document.getElementById("labelCalcBMI").innerHTML = calcBMI(mainUser.height, mainUser.weight);
-    document.getElementById("labelCalcBMIDesc").innerHTML = getBMIdesc(calcBMI(mainUser.height, mainUser.weight));
+    labelFullName.innerHTML = mainUser.getFullName();
+    labelAge.innerHTML = mainUser.age;
+    labelGender.innerHTML = mainUser.getGenderDesc();
+    labelFullTodayDate.innerHTML = currentDate;
+    labelCalcBMI.innerHTML = calcBMI(mainUser.height, mainUser.weight);
+    labelCalcBMIDesc.innerHTML = getBMIdesc(calcBMI(mainUser.height, mainUser.weight));
 }
 
 // capitalize first letter
@@ -82,8 +122,4 @@ function getBMIdesc(BMI) {
 
 // Call functions
 populateLabels();
-console.log(mainUser.getFullName());
-console.log(mainUser.getGenderDesc());
-console.log(calcBMI(parseInt(mainUser.height), parseInt(mainUser.weight)));
-console.log(getBMIdesc( calcBMI(parseInt(mainUser.height), parseInt(mainUser.weight))));
 localStorage.clear();
