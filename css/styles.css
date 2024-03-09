@@ -197,12 +197,34 @@ footer p {
   width: 66.7%;
   padding: 30px 10px;
 }
+.body-dashboard main .container-fluid div .main-table-workout-container p {
+  margin: 0;
+}
+.body-dashboard main .container-fluid div .main-table-workout-container .add-new-workout-bar .form-control-select-input-md, .body-dashboard main .container-fluid div .main-table-workout-container .add-new-workout-bar div .main-container-login div .col-container-right-cont .form-control-text-input-md, .body-dashboard main .container-fluid div div .main-container-login div .col-container-right-cont .main-table-workout-container .add-new-workout-bar .form-control-text-input-md {
+  margin: 0;
+  border: 1px solid #E2E2E2;
+  border-radius: 6px;
+  height: 38px;
+  padding-left: 5px;
+  color: #585C5E;
+}
+.body-dashboard main .container-fluid div .main-table-workout-container .add-new-workout-bar .form-control-select-input-md:focus, .body-dashboard main .container-fluid div .main-table-workout-container .add-new-workout-bar div .main-container-login div .col-container-right-cont .form-control-text-input-md:focus, .body-dashboard main .container-fluid div div .main-container-login div .col-container-right-cont .main-table-workout-container .add-new-workout-bar .form-control-text-input-md:focus {
+  border: 1px solid #FE4A27;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #FE4A27;
+}
+.body-dashboard main .container-fluid div .main-table-workout-container .add-new-workout-bar .form-control-text-input {
+  width: 250px;
+  display: inline;
+}
+.body-dashboard main .container-fluid div .main-table-workout-container .add-new-workout-bar .form-control-text-input:focus {
+  border: 1px solid #FE4A27;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #FE4A27;
+}
 .body-dashboard main .container-fluid div .main-table-workout-container .btn-primary {
-  position: absolute;
-  right: 7%;
-  top: 20%;
   background-color: #FE4A27;
   border-color: #FE975B;
+  margin-bottom: 3px;
+  height: 38px;
 }
 .body-dashboard main .container-fluid div .main-table-workout-container .btn-primary:hover {
   background-color: rgba(254, 74, 39, 0.8);

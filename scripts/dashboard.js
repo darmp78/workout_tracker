@@ -60,7 +60,7 @@ let myNewWorkouts = [];
 
 
 btnAAddWorkout.onclick = function () {
-    let dataTotable ="";
+    let dataTotable = "";
     let newWorkout = new Workout(
         currentDate,
         "hiit",
@@ -70,7 +70,14 @@ btnAAddWorkout.onclick = function () {
     myNewWorkouts.push(newWorkout);
 
     for (let i = 0; i < myNewWorkouts.length; i++) {
-        dataTotable +="<tr><td>"+myNewWorkouts[i].date+"</th><td>Running</td><td>5</td><td>Ejercicio de alto redimiento.</td></tr>";
+        dataTotable += `<tr>
+        <td>`+ myNewWorkouts[i].date + `</th>
+        <td>
+        Boxeo
+        </td>
+        <td>5</td>
+        <td>Ejercicio de alto redimiento.</td>
+        </tr>`;
     }
 
     mainWorkoutTable.innerHTML = dataTotable;

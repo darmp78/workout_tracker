@@ -113,14 +113,40 @@
                 .main-table-workout-container {
                     width: 66.7%;
                     padding: 30px 10px;
+                    p{
+                        margin: 0;
+                    }
+                    .add-new-workout-bar{
 
+                        .form-control-select-input-md {
+                            margin: 0;
+                            border: 1px solid $gray4;
+                            border-radius: 6px;
+                            height: 38px;
+                            padding-left: 5px;
+                            color: #585C5E;
+
+                            &:focus {
+                                border: 1px solid $secundaryColor;
+                                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $secundaryColor;
+                            }
+                        }
+                        .form-control-text-input{
+                            width: 250px;
+                            display: inline;
+                            &:focus {
+                                border: 1px solid $secundaryColor;
+                                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $secundaryColor;
+                            }
+                        }
+                        
+
+                    }
                     .btn-primary {
-                        position: absolute;
-                        right: 7%;
-                        top: 20%;
                         background-color: $secundaryColor;
                         border-color: $thirdColor;
-
+                        margin-bottom: 3px;
+                        height: 38px;
                         &:hover {
                             background-color: $secundaryColorCC;
                         }

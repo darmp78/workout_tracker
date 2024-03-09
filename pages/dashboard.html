@@ -22,7 +22,9 @@
                     <img src="../images/mainLogo.png" alt="mainLogo">
                 </div>
                 <div class="col-lg-6">
-                    <a class="btn btn-primary btn-log-off" href="../index.html"><i class="fas fa-2x fa-power-off"></i><h4>Salir</h4></a>
+                    <a class="btn btn-primary btn-log-off" href="../index.html"><i class="fas fa-2x fa-power-off"></i>
+                        <h4>Salir</h4>
+                    </a>
                 </div>
             </div>
         </div>
@@ -56,7 +58,29 @@
                 <div class="col-lg-6 main-table-workout-container">
                     <div class="table-workout-container">
                         <h3>Mis entrenamientos</h3>
-                        <button id="btnAAddWorkout" class="btn btn-primary">+</button>
+                        <p>Agregar:</p>
+                        <div class="add-new-workout-bar">
+                            <select id="selectNewWorkoutName" class="form-control-select-input-md">
+                                <option value="" selected="" hidden="">Ejercicio</option>
+                                <option value="hiit">Alta intensidad</option>
+                                <option value="atletismo">Atletismo</option>
+                                <option value="boxeo">Boxeo</option>
+                                <option value="crossfit">Crossfit</option>
+                                <option value="natacion">Natación</option>
+                                <option value="pesas">Pesas</option>
+                            </select>
+                            <select id="selectNewWorkoutDuration" class="form-control-select-input-md">
+                                <option value="" selected="" hidden="">Duración (min)</option>
+                                <option value="">10</option>
+                                <option value="">20</option>
+                                <option value="">30</option>
+                                <option value="">60</option>
+                            </select>
+                            <input id="inputtextNewWorkoutDesc" type="text" class="form-control form-control-text-input"
+                            placeholder="Descripción...">
+                            <button id="btnAAddWorkout" class="btn btn-primary">Agregar</button>
+                        </div>
+                        <hr class="divi-line">
                         <div class="row filters-bar">
                             <div class="col-lg-4 filters-bar-ico">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -76,7 +100,7 @@
                             <div class="col-lg-4">
                                 <select id="inputFilterWorkout" class="form-control-select-input-md">
                                     <option value="all" selected="">Todos</option>
-                                    <option value="hiit">Alta intensidad</option>                                    
+                                    <option value="hiit">Alta intensidad</option>
                                     <option value="atletismo">Atletismo</option>
                                     <option value="boxeo">Boxeo</option>
                                     <option value="crossfit">Crossfit</option>
@@ -88,17 +112,17 @@
                         <p>Ultimos entrenamientos registrados:</p>
                         <table class="table table-striped">
                             <thead>
-                              <tr>
-                                <th scope="col" class="th-border-rd-left">Fecha</th>
-                                <th scope="col">Ejercicio</th>
-                                <th scope="col">Duración</th>
-                                <th scope="col" class="th-border-rd-right">Descripción</th>
-                              </tr>
+                                <tr>
+                                    <th scope="col" class="th-border-rd-left">Fecha</th>
+                                    <th scope="col">Ejercicio</th>
+                                    <th scope="col">Duración</th>
+                                    <th scope="col" class="th-border-rd-right">Descripción</th>
+                                </tr>
                             </thead>
                             <tbody id="mainWorkoutTable">
-                              
+
                             </tbody>
-                          </table>
+                        </table>
                     </div>
 
                 </div>
