@@ -271,6 +271,14 @@ footer p {
 }
 .body-dashboard main .container-fluid div .main-table-workout-container .table-striped thead tr .th-border-rd-right {
   border-radius: 0 15px 0 0;
+  width: 50px;
+}
+.body-dashboard main .container-fluid div .main-table-workout-container .table-striped tbody tr td .transparent-button {
+  border-color: transparent;
+  background-color: transparent;
+}
+.body-dashboard main .container-fluid div .main-table-workout-container .table-striped tbody tr td .transparent-button .fa-trash-alt {
+  color: #FE4A27;
 }
 .body-dashboard main .container-fluid div .main-result-workout-container {
   width: 33.3%;

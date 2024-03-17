@@ -128,11 +128,13 @@ btnAAddWorkout.onclick = function () {
         <td>
         `+ myNewWorkouts[i].description + `
         </td>
+        <td>
+        <button id="buttonDeleteWorkout" onClick="deleteElement(`+i+`)" class="transparent-button"><i class="fas fa-trash-alt"></i></button>
+        </td>
         </tr>`;
     }
 
     mainWorkoutTable.innerHTML = dataTotable;
-    console.log(myNewWorkouts);
 }
 
 // Filter workout table
@@ -158,6 +160,9 @@ inputFilterWorkout.addEventListener("change", function(){
         <td>
         `+ filteredResults[i].description + `
         </td>
+        <td>
+        <button id="buttonDeleteWorkout" onClick="deleteElement(`+i+`)" class="transparent-button"><i class="fas fa-trash-alt"></i></button>
+        </td>
         </tr>`;
     }
     mainWorkoutTable.innerHTML = filteredDataToTable;
@@ -165,6 +170,33 @@ inputFilterWorkout.addEventListener("change", function(){
     console.log(filteredResults);
     console.log("Change filter: "+inputFilterWorkout.value);
 });
+// delete element from mynewWorkout
+function deleteElement(elementId){
+    let dataTotable = "";
+    myNewWorkouts.splice(elementId,1);
+    for (let i = 0; i < myNewWorkouts.length; i++) {
+        dataTotable += `<tr>
+        <td>`+ myNewWorkouts[i].date + `</th>
+        <td>
+        `+ myNewWorkouts[i].ID + `
+        </td>
+        <td>
+        `+ myNewWorkouts[i].duration + `
+        </td>
+        <td>
+        `+ myNewWorkouts[i].description + `
+        </td>
+        <td>
+        <button id="buttonDeleteWorkout" onClick="deleteElement(`+i+`)" class="transparent-button"><i class="fas fa-trash-alt"></i></button>
+        </td>
+        </tr>`;
+    }
+
+    mainWorkoutTable.innerHTML = dataTotable;
+
+    console.log("element ID: "+elementId);
+    console.log(myNewWorkouts);
+}
 
 
 // Call functions

@@ -208,6 +208,21 @@
 
                                 .th-border-rd-right {
                                     border-radius: 0 15px 0 0;
+                                    width: 50px;
+                                }
+                            }
+                        }
+                        tbody{
+                            tr{
+                                td{
+                                    .transparent-button{
+                                        border-color: transparent;
+                                        background-color: transparent;
+                                        .fa-trash-alt{
+                                        color: $secundaryColor;
+                                    }
+                                    }
+                                    
                                 }
                             }
                         }
