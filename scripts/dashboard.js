@@ -129,7 +129,7 @@ btnAAddWorkout.onclick = function () {
         `+ myNewWorkouts[i].description + `
         </td>
         <td>
-        <button id="buttonDeleteWorkout" onClick="deleteElement(`+i+`)" class="transparent-button"><i class="fas fa-trash-alt"></i></button>
+        <button id="buttonDeleteWorkout" onClick="deleteElement(`+ i + `)" class="transparent-button"><i class="fas fa-trash-alt"></i></button>
         </td>
         </tr>`;
     }
@@ -138,15 +138,15 @@ btnAAddWorkout.onclick = function () {
 }
 
 // Filter workout table
-inputFilterWorkout.addEventListener("change", function(){
+inputFilterWorkout.addEventListener("change", function () {
     let filteredResults = [];
     let filteredDataToTable = "";
 
-    if(inputFilterWorkout.value == "all"){
+    if (inputFilterWorkout.value == "all") {
         filteredResults = myNewWorkouts;
-    }else{
-        filteredResults = myNewWorkouts.filter((workout) => workout.ID==inputFilterWorkout.value);
-    }   
+    } else {
+        filteredResults = myNewWorkouts.filter((workout) => workout.ID == inputFilterWorkout.value);
+    }
 
     for (let i = 0; i < filteredResults.length; i++) {
         filteredDataToTable += `<tr>
@@ -161,19 +161,19 @@ inputFilterWorkout.addEventListener("change", function(){
         `+ filteredResults[i].description + `
         </td>
         <td>
-        <button id="buttonDeleteWorkout" onClick="deleteElement(`+i+`)" class="transparent-button"><i class="fas fa-trash-alt"></i></button>
+        <button id="buttonDeleteWorkout" onClick="deleteElement(`+ i + `)" class="transparent-button"><i class="fas fa-trash-alt"></i></button>
         </td>
         </tr>`;
     }
     mainWorkoutTable.innerHTML = filteredDataToTable;
 
     console.log(filteredResults);
-    console.log("Change filter: "+inputFilterWorkout.value);
+    console.log("Change filter: " + inputFilterWorkout.value);
 });
 // delete element from mynewWorkout
-function deleteElement(elementId){
+function deleteElement(elementId) {
     let dataTotable = "";
-    myNewWorkouts.splice(elementId,1);
+    myNewWorkouts.splice(elementId, 1);
     for (let i = 0; i < myNewWorkouts.length; i++) {
         dataTotable += `<tr>
         <td>`+ myNewWorkouts[i].date + `</th>
@@ -187,14 +187,14 @@ function deleteElement(elementId){
         `+ myNewWorkouts[i].description + `
         </td>
         <td>
-        <button id="buttonDeleteWorkout" onClick="deleteElement(`+i+`)" class="transparent-button"><i class="fas fa-trash-alt"></i></button>
+        <button id="buttonDeleteWorkout" onClick="deleteElement(`+ i + `)" class="transparent-button"><i class="fas fa-trash-alt"></i></button>
         </td>
         </tr>`;
     }
 
     mainWorkoutTable.innerHTML = dataTotable;
 
-    console.log("element ID: "+elementId);
+    console.log("element ID: " + elementId);
     console.log(myNewWorkouts);
 }
 
