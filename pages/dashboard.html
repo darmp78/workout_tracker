@@ -50,7 +50,11 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="weather-container">
-                        <p>Weather, disponible en proximas entregas</p>
+                        <p id="weaderLabelLocation"><i class="fas fa-map-marker-alt"></i> Montevideo</p>
+                        <img id="weaderIMG" src="../images/typcn_weather-stormy.png" class="img-weather"
+                            alt="weatherImg">
+                        <h1 id="weaderLabelTemNum" class="h1-weather-num">26°</h1>
+                        <p id="weaderLabelName" class="p-secundary">Tormenta</p>
                     </div>
                 </div>
             </div>
@@ -77,12 +81,12 @@
                                 <option value="60">60</option>
                             </select>
                             <input id="inputtextNewWorkoutDesc" type="text" class="form-control form-control-text-input"
-                            placeholder="Descripción...">
+                                placeholder="Descripción...">
                             <button id="btnAAddWorkout" class="btn btn-primary">Agregar</button>
                         </div>
                         <hr class="divi-line">
                         <div class="row filters-bar">
-                            <div class="col-lg-4 filters-bar-ico">
+                            <div class="col-lg-6 filters-bar-ico">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -91,13 +95,7 @@
                                 </svg>
 
                             </div>
-                            <div class="col-lg-4">
-                                <select id="inputFilterDate" class="form-control-select-input-md">
-                                    <option value="" selected="" hidden="">Fecha</option>
-                                    <option value="">...</option>
-                                </select>
-                            </div>
-                            <div class="col-lg-4">
+                            <div class="col-lg-6">
                                 <select id="inputFilterWorkout" class="form-control-select-input-md">
                                     <option value="all" selected="">Todos</option>
                                     <option value="hiit">Alta intensidad</option>
@@ -114,14 +112,14 @@
                             <thead>
                                 <tr>
                                     <th scope="col" class="th-border-rd-left">Fecha</th>
-                                    <th scope="col" >Ejercicio</th>
-                                    <th scope="col" >Duración</th>
-                                    <th scope="col" >Descripción</th>
+                                    <th scope="col">Ejercicio</th>
+                                    <th scope="col">Duración</th>
+                                    <th scope="col">Descripción</th>
                                     <th scope="col" class="th-border-rd-right"></th>
                                 </tr>
                             </thead>
                             <tbody id="mainWorkoutTable">
-                               
+
                                 </tr>
                             </tbody>
                         </table>
@@ -131,7 +129,55 @@
                 <div class="col-lg-6 main-result-workout-container">
                     <div class="result-workout-container">
                         <h3>Mis objetivos</h3>
-                        <p>Mis objetivos, disponible en proximas entregas</p>
+                        <h4>64%</h4>
+                        <p>Completado</p>
+                        <div class="chart-container">
+                            <svg class="svg-step1" width='100%' height='100%' viewBox='0 0 100 100'
+                                xmlns='https://www.w3.org/2000/svg'>
+                                <mask id='chart'>
+                                    <rect x='0' y='0' width='100' height='100' fill='white' />
+                                    <circle cx='50' cy='50' r='25' fill='transparent' stroke='black' stroke-width='50'
+                                        stroke-dasharray='calc(var(--percentage) * 157.0795 / 100) 157.0795'
+                                        transform='rotate(-90) translate(-100)' />
+                                    <circle cx='50' cy='50' r='40' fill='white' />
+                                </mask>
+                                <g mask='url(#chart)'>
+                                    <rect x='0' y='0' width='100' height='100' fill='white' />
+                                    <circle cx='50' cy='50' r='45' fill='white' stroke='#F0F0F0' stroke-width='10' />
+                                </g>
+                            </svg>
+                            
+                        </div>
+                        <div class="resultNum-main-container">
+                            <div class="resultNum-container">
+                                <div class="text-in">
+                                    <i class="fas fa-clock icon_num"></i>
+                                    <p><span id="actHours">4</span> / 10 horas de actividad</p>
+                                </div>
+                                <div class="text-out">
+                                    <p id="actHoursPerc">40%</p>
+                                </div>
+                            </div>
+                            <div class="resultNum-container">
+                                <div class="text-in">
+                                    <i class="fas fa-fire icon_num"></i>
+                                    <p><span id="calBurn">541</span> / 800 Calorias</p>
+                                </div>
+                                <div class="text-out">
+                                    <p id="calBurnPerc">67%</p>
+                                </div>
+                            </div>
+                            <div class="resultNum-container">
+                                <div class="text-in">
+                                    <i class="fas fa-running icon_num"></i>
+                                    <p><span>780</span> / 1000 Pasos</p>
+                                </div>
+                                <div class="text-out">
+                                    <p>78%</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>

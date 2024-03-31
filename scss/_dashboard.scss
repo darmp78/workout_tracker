@@ -104,7 +104,29 @@
                         p {
                             color: $primaryColor;
                             margin: 0;
-                            padding: 10%;
+                            padding: 16px 0 0 0;
+                            font-weight: 600;
+
+                            .fa-map-marker-alt {
+                                color: $secundaryColor;
+                            }
+                        }
+
+                        .img-weather {
+                            display: inline;
+                            margin: 0 16px;
+                        }
+
+                        .h1-weather-num {
+                            @extend .img-weather;
+                            vertical-align: middle;
+                            font-size: 48px;
+                            color: $primaryColor;
+                        }
+
+                        .p-secundary {
+                            @extend p;
+                            padding: 0;
                         }
 
                     }
@@ -113,10 +135,12 @@
                 .main-table-workout-container {
                     width: 66.7%;
                     padding: 30px 10px;
-                    p{
+
+                    p {
                         margin: 0;
                     }
-                    .add-new-workout-bar{
+
+                    .add-new-workout-bar {
 
                         .form-control-select-input-md {
                             margin: 0;
@@ -131,22 +155,26 @@
                                 box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $secundaryColor;
                             }
                         }
-                        .form-control-text-input{
+
+                        .form-control-text-input {
                             width: 250px;
                             display: inline;
+
                             &:focus {
                                 border: 1px solid $secundaryColor;
                                 box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $secundaryColor;
                             }
                         }
-                        
+
 
                     }
+
                     .btn-primary {
                         background-color: $secundaryColor;
                         border-color: $thirdColor;
                         margin-bottom: 3px;
                         height: 38px;
+
                         &:hover {
                             background-color: $secundaryColorCC;
                         }
@@ -157,7 +185,7 @@
                         background: rgba(255, 255, 255, 0.97);
                         box-shadow: 10px 7px 24.9px rgba(0, 0, 0, 0.25);
                         border-radius: 30px;
-                        padding: 20px 30px;
+                        padding: 30px;
 
                         h3 {
                             color: $secundaryColor;
@@ -212,17 +240,19 @@
                                 }
                             }
                         }
-                        tbody{
-                            tr{
-                                td{
-                                    .transparent-button{
+
+                        tbody {
+                            tr {
+                                td {
+                                    .transparent-button {
                                         border-color: transparent;
                                         background-color: transparent;
-                                        .fa-trash-alt{
-                                        color: $secundaryColor;
+
+                                        .fa-trash-alt {
+                                            color: $secundaryColor;
+                                        }
                                     }
-                                    }
-                                    
+
                                 }
                             }
                         }
@@ -236,15 +266,79 @@
 
                     .result-workout-container {
                         position: relative;
-                        height: 158px;
                         background: rgba(255, 255, 255, 0.97);
                         box-shadow: 10px 7px 24.9px rgba(0, 0, 0, 0.25);
                         border-radius: 30px;
-                        padding: 20px 30px;
+                        padding: 30px;
 
                         h3 {
                             color: $secundaryColor;
+                            margin-bottom: 16px;
                         }
+
+                        h4 {
+                            color: $primaryColor;
+                            margin: 0;
+                        }
+
+                        p {
+                            padding: 0;
+                            margin: 0;
+                            color: $primaryColor;
+                        }
+
+                        .chart-container {
+                            margin: 16px 0;
+                            padding: 22px;
+
+                            .svg-step1 {
+                                background-color: $secundaryColor;
+
+                                mask {
+                                    circle {
+                                        --percentage: 55;
+                                    }
+                                }
+                            }
+                            
+                        }
+                        .resultNum-main-container{
+                            margin-bottom: 10px;
+                            .resultNum-container {
+                            padding-top: 8px;
+
+                            .text-in {
+                                display: inline;
+                                font-size: 18px;
+                                .icon_num {
+                                    display: inline;
+                                    color: $secundaryColor;
+                                }
+
+                                p {
+                                    display: inline;
+                                    color: $gray1;
+                                    span{
+                                        color: $primaryColor;
+                                    }
+                                }
+                            }
+
+                            .text-out {
+                                display: inline;
+                                position: absolute;
+                                right: 30px;
+
+                                p {
+                                    display: inline;
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                        }
+                        
+
+
                     }
 
 

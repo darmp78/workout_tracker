@@ -1,5 +1,5 @@
 // Get the object from the local storage
-const userData = JSON.parse(localStorage.getItem("newUser"));
+const userData = JSON.parse(localStorage.getItem("newUser")) || [];
 
 //get the main HTML elements
 const labelFullName = document.getElementById("labelFullName");
