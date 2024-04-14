@@ -14,6 +14,11 @@ const selectNewWorkoutName = document.getElementById("selectNewWorkoutName");
 const selectNewWorkoutDuration = document.getElementById("selectNewWorkoutDuration");
 const inputtextNewWorkoutDesc = document.getElementById("inputtextNewWorkoutDesc");
 const inputFilterWorkout = document.getElementById("inputFilterWorkout");
+const labelActHoursPerc = document.getElementById("actHoursPerc");
+const labelactHours = document.getElementById("actHours");
+
+//Set my goal
+const workoutGoalMinutes = 180;
 
 // Get the system date
 const currentDate = new Date().toDateString();
@@ -104,6 +109,7 @@ function getBMIdesc(BMI) {
 // Create Workout, insert and load
 
 let myNewWorkouts = [];
+let activeHours = 0.0;
 
 
 btnAAddWorkout.onclick = function () {
@@ -115,6 +121,10 @@ btnAAddWorkout.onclick = function () {
         inputtextNewWorkoutDesc.value
     );
     myNewWorkouts.push(newWorkout);
+
+    //My goals data
+    //Active hours
+    calActiveHours(workoutGoalMinutes);
 
     for (let i = 0; i < myNewWorkouts.length; i++) {
         dataTotable += `<tr>
@@ -194,8 +204,27 @@ function deleteElement(elementId) {
 
     mainWorkoutTable.innerHTML = dataTotable;
 
+    //My goals data
+    //Active hours
+    calActiveHours(workoutGoalMinutes);
+
     console.log("element ID: " + elementId);
     console.log(myNewWorkouts);
+}
+
+//change and load the active ahours
+function calActiveHours(goal) {
+    let actHoursPerc = 0.0;
+    let actHourinMin = 0.0;
+    if (goal > 0) {
+        for (let index = 0; index < myNewWorkouts.length; index++) {
+            actHourinMin += parseInt(myNewWorkouts[index].duration);
+        }
+        actHoursPerc = Math.ceil((100 * actHourinMin) / goal);
+        labelActHoursPerc.innerHTML = actHoursPerc + "%";
+        labelactHours.innerHTML = Number(actHourinMin / 60).toFixed(1);
+    }
+
 }
 
 
