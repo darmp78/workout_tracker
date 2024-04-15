@@ -16,9 +16,14 @@ const inputtextNewWorkoutDesc = document.getElementById("inputtextNewWorkoutDesc
 const inputFilterWorkout = document.getElementById("inputFilterWorkout");
 const labelActHoursPerc = document.getElementById("actHoursPerc");
 const labelactHours = document.getElementById("actHours");
+const labeltotalActGoal = document.getElementById("totalActGoal");
+const svgMainActGoalCircle = document.getElementById("mainActGoalCircle");
 
 //Set my goal
 const workoutGoalMinutes = 180;
+
+//Set percentage bar value
+document.documentElement.style.setProperty("--percentage", 0);
 
 // Get the system date
 const currentDate = new Date().toDateString();
@@ -223,6 +228,8 @@ function calActiveHours(goal) {
         actHoursPerc = Math.ceil((100 * actHourinMin) / goal);
         labelActHoursPerc.innerHTML = actHoursPerc + "%";
         labelactHours.innerHTML = Number(actHourinMin / 60).toFixed(1);
+        labeltotalActGoal.innerHTML = actHoursPerc + "%";
+        document.documentElement.style.setProperty("--percentage", actHoursPerc);
     }
 
 }

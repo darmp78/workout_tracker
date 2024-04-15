@@ -327,9 +327,6 @@ footer p, footer .body-dashboard main .container-fluid div div .weather-containe
 .body-dashboard main .container-fluid div .main-result-workout-container .result-workout-container .chart-container .svg-step1 {
   background-color: #FE4A27;
 }
-.body-dashboard main .container-fluid div .main-result-workout-container .result-workout-container .chart-container .svg-step1 mask circle {
-  --percentage: 55;
-}
 .body-dashboard main .container-fluid div .main-result-workout-container .result-workout-container .resultNum-main-container {
   margin-bottom: 10px;
 }
