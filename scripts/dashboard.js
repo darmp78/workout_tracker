@@ -18,12 +18,20 @@ const labelActHoursPerc = document.getElementById("actHoursPerc");
 const labelactHours = document.getElementById("actHours");
 const labeltotalActGoal = document.getElementById("totalActGoal");
 const svgMainActGoalCircle = document.getElementById("mainActGoalCircle");
+const labelcalBurn = document.getElementById("calBurn");
+const labelcalBurnPerc = document.getElementById("calBurnPerc");
+const labelcalStepsTotal = document.getElementById("calStepsTotal");
+const labelcalStepsTotalPerc = document.getElementById("calStepsTotalPerc");
 
-//Set my goal
+//Set my goals
 const workoutGoalMinutes = 180;
+const workoutGoalCalories = 800;
+const workoutSteps = 7000;
 
-//Set percentage bar value
+//Set percentage bar values
 document.documentElement.style.setProperty("--percentage", 0);
+document.documentElement.style.setProperty("--percentageCalories", 0);
+document.documentElement.style.setProperty("--percentageSteps", 0);
 
 // Get the system date
 const currentDate = new Date().toDateString();
@@ -52,12 +60,13 @@ function User(fName, lName, age, gender, height, weight) {
 }
 
 // Create object workout
-function Workout(date, workoutID, duration, descr) {
+function Workout(date, workoutID, duration, descr, caloriesPerMin, stepsPerMin) {
     this.date = date;
     this.ID = workoutID;
     this.duration = duration;
     this.description = descr;
-
+    this.caloriesPerminute = caloriesPerMin;
+    this.stepsPerMin = stepsPerMin;
 }
 
 // Create user 
@@ -123,13 +132,19 @@ btnAAddWorkout.onclick = function () {
         currentDate,
         selectNewWorkoutName.value,
         selectNewWorkoutDuration.value,
-        inputtextNewWorkoutDesc.value
+        inputtextNewWorkoutDesc.value,
+        caloriesPerMinute(selectNewWorkoutName.value, parseInt(selectNewWorkoutDuration.value)),
+        stepsPerMinCalc(selectNewWorkoutName.value, parseInt(selectNewWorkoutDuration.value))
     );
     myNewWorkouts.push(newWorkout);
 
     //My goals data
     //Active hours
     calActiveHours(workoutGoalMinutes);
+    //Active Calories
+    calActiveCalories(workoutGoalCalories);
+    //Active steps
+    calActiveSteps(workoutSteps);
 
     for (let i = 0; i < myNewWorkouts.length; i++) {
         dataTotable += `<tr>
@@ -212,6 +227,10 @@ function deleteElement(elementId) {
     //My goals data
     //Active hours
     calActiveHours(workoutGoalMinutes);
+    //Active Calories
+    calActiveCalories(workoutGoalCalories);
+    //Active steps
+    calActiveSteps(workoutSteps);
 
     console.log("element ID: " + elementId);
     console.log(myNewWorkouts);
@@ -234,6 +253,93 @@ function calActiveHours(goal) {
 
 }
 
+//calculate calories per minute.
+function caloriesPerMinute(workoutNameID, workoutDuration) {
+    let totalCalories = 0;
+
+    switch (workoutNameID) {
+        case "atletismo":
+            totalCalories = 9.2 * workoutDuration;
+            break;
+        case "hiit":
+            totalCalories = 9 * workoutDuration;
+            break;
+        case "boxeo":
+            totalCalories = 11.6 * workoutDuration;
+            break;
+        case "crossfit":
+            totalCalories = 17.7 * workoutDuration;
+            break;
+        case "natacion":
+            totalCalories = 12.4 * workoutDuration;
+            break;
+        case "pesas":
+            totalCalories = 4.7 * workoutDuration;
+            break;
+        default:
+            totalCalories = 0;
+            break;
+    }
+
+    return totalCalories;
+}
+
+//Change and load the active calories
+function calActiveCalories(goalCalories) {
+    let totalCaloriesDay = 0;
+    let totalCaloriesDayPerc = 0;
+    for (let j = 0; j < myNewWorkouts.length; j++) {
+        totalCaloriesDay += myNewWorkouts[j].caloriesPerminute;
+    }
+    totalCaloriesDayPerc = Math.ceil((100 * totalCaloriesDay) / goalCalories);
+    labelcalBurn.innerHTML = totalCaloriesDay;
+    labelcalBurnPerc.innerHTML = totalCaloriesDayPerc + "%";
+    document.documentElement.style.setProperty("--percentageCalories", totalCaloriesDayPerc);
+}
+
+//Calculate steps per minute
+function stepsPerMinCalc (workoutNameID, workoutDuration){
+    let totalSteps = 0;
+
+    switch (workoutNameID) {
+        case "atletismo":
+            totalSteps = 180 * workoutDuration;
+            break;
+        case "hiit":
+            totalSteps = 70 * workoutDuration;
+            break;
+        case "boxeo":
+            totalSteps = 50 * workoutDuration;
+            break;
+        case "crossfit":
+            totalSteps = 50 * workoutDuration;
+            break;
+        case "natacion":
+            totalSteps = 0 * workoutDuration;
+            break;
+        case "pesas":
+            totalSteps = 110 * workoutDuration;
+            break;
+        default:
+            totalSteps = 0;
+            break;
+    }
+
+    return totalSteps;
+}
+
+//Change and load the active steps
+function calActiveSteps(goalSteps) {
+    let totalStepsDay =0;
+    let totalstepsDayPerc=0;
+    for (let k = 0; k < myNewWorkouts.length; k++) {
+        totalStepsDay += myNewWorkouts[k].stepsPerMin;
+    }
+    totalstepsDayPerc = Math.ceil((100 * totalStepsDay) / goalSteps);
+    labelcalStepsTotal.innerHTML = totalStepsDay;
+    labelcalStepsTotalPerc.innerHTML = totalstepsDayPerc+"%";
+    document.documentElement.style.setProperty("--percentageSteps", totalstepsDayPerc);
+}
 
 // Call functions
 populateLabels();

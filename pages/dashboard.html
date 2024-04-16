@@ -136,17 +136,31 @@
                                 xmlns='https://www.w3.org/2000/svg'>
                                 <mask id='chart'>
                                     <rect x='0' y='0' width='100' height='100' fill='white' />
-                                    <circle id="mainActGoalCircle" cx='50' cy='50' r='25' fill='transparent' stroke='black' stroke-width='50'
+                                    <circle id="mainActGoalCircle" cx='50' cy='50' r='25' fill='transparent'
+                                        stroke='black' stroke-width='50'
                                         stroke-dasharray='calc(var(--percentage) * 157.0795 / 100) 157.0795'
                                         transform='rotate(-90) translate(-100)' />
                                     <circle cx='50' cy='50' r='40' fill='white' />
+                                    <circle id="mainActGoalCircle2" cx='50' cy='50' r='10' fill='transparent'
+                                        stroke='black' stroke-width='50'
+                                        stroke-dasharray='calc(var(--percentageCalories) * 62.8 / 100) 62.8'
+                                        transform='rotate(-90) translate(-100)' />
+                                    <circle cx='50' cy='50' r='25' fill='white' />
+                                    <circle id="mainActGoalCircle3" cx='50' cy='50' r='5' fill='transparent'
+                                        stroke='black' stroke-width='31'
+                                        stroke-dasharray='calc(var(--percentageSteps) * 31.42 / 100) 34.42'
+                                        transform='rotate(-90) translate(-100)' />
+                                    <circle cx='50' cy='50' r='10' fill='white' />
                                 </mask>
                                 <g mask='url(#chart)'>
                                     <rect x='0' y='0' width='100' height='100' fill='white' />
                                     <circle cx='50' cy='50' r='45' fill='white' stroke='#F0F0F0' stroke-width='10' />
+                                    <circle cx='50' cy='50' r='30' fill='white' stroke='#F0F0F0' stroke-width='10' />
+                                    <circle cx='50' cy='50' r='15' fill='white' stroke='#F0F0F0' stroke-width='10' />
                                 </g>
+
                             </svg>
-                            
+
                         </div>
                         <div class="resultNum-main-container">
                             <div class="resultNum-container">
@@ -161,19 +175,19 @@
                             <div class="resultNum-container">
                                 <div class="text-in">
                                     <i class="fas fa-fire icon_num"></i>
-                                    <p><span id="calBurn">541</span> / 800 Calorias</p>
+                                    <p><span id="calBurn">0</span> / 800 Calorias</p>
                                 </div>
                                 <div class="text-out">
-                                    <p id="calBurnPerc">67%</p>
+                                    <p id="calBurnPerc">0%</p>
                                 </div>
                             </div>
                             <div class="resultNum-container">
                                 <div class="text-in">
                                     <i class="fas fa-running icon_num"></i>
-                                    <p><span>780</span> / 1000 Pasos</p>
+                                    <p><span id="calStepsTotal">0</span> / 7000 Pasos</p>
                                 </div>
                                 <div class="text-out">
-                                    <p>78%</p>
+                                    <p id="calStepsTotalPerc">0%</p>
                                 </div>
                             </div>
                         </div>

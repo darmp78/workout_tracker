@@ -325,7 +325,7 @@ footer p, footer .body-dashboard main .container-fluid div div .weather-containe
   padding: 22px;
 }
 .body-dashboard main .container-fluid div .main-result-workout-container .result-workout-container .chart-container .svg-step1 {
-  background-color: #FE4A27;
+  background: radial-gradient(circle, rgb(255, 226, 195) 22%, rgb(254, 151, 91) 49%, rgb(254, 74, 39) 74%);
 }
 .body-dashboard main .container-fluid div .main-result-workout-container .result-workout-container .resultNum-main-container {
   margin-bottom: 10px;
