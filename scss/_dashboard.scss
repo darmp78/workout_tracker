@@ -111,23 +111,30 @@
                                 color: $secundaryColor;
                             }
                         }
+                        div{
+                            .city-name-img{
+                                padding-top: 16px;
+                                width: 40%;
+                                text-align: end;
+                                .img-city {
+                                    display: inline;
+                                    scale: 1.1;
+                                }
+        
+                                
 
-                        .img-weather {
-                            display: inline;
-                            margin: 0 16px;
+                            }
+                            .city-name-text{
+                                padding-top: 26px;
+                                width: 60%;
+                                .p-secundary {
+                                    @extend p;
+                                    padding: 0;
+                                    text-align: justify;
+                                }
+                            }
                         }
-
-                        .h1-weather-num {
-                            @extend .img-weather;
-                            vertical-align: middle;
-                            font-size: 48px;
-                            color: $primaryColor;
-                        }
-
-                        .p-secundary {
-                            @extend p;
-                            padding: 0;
-                        }
+                        
 
                     }
                 }

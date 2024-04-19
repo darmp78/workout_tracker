@@ -22,6 +22,8 @@ const labelcalBurn = document.getElementById("calBurn");
 const labelcalBurnPerc = document.getElementById("calBurnPerc");
 const labelcalStepsTotal = document.getElementById("calStepsTotal");
 const labelcalStepsTotalPerc = document.getElementById("calStepsTotalPerc");
+const labelmyCityLabelName = document.getElementById("myCityLabelName");
+const labelmyRegionLabelName = document.getElementById("myRegionLabelName");
 
 //Set my goals
 const workoutGoalMinutes = 180;
@@ -298,7 +300,7 @@ function calActiveCalories(goalCalories) {
 }
 
 //Calculate steps per minute
-function stepsPerMinCalc (workoutNameID, workoutDuration){
+function stepsPerMinCalc(workoutNameID, workoutDuration) {
     let totalSteps = 0;
 
     switch (workoutNameID) {
@@ -330,17 +332,54 @@ function stepsPerMinCalc (workoutNameID, workoutDuration){
 
 //Change and load the active steps
 function calActiveSteps(goalSteps) {
-    let totalStepsDay =0;
-    let totalstepsDayPerc=0;
+    let totalStepsDay = 0;
+    let totalstepsDayPerc = 0;
     for (let k = 0; k < myNewWorkouts.length; k++) {
         totalStepsDay += myNewWorkouts[k].stepsPerMin;
     }
     totalstepsDayPerc = Math.ceil((100 * totalStepsDay) / goalSteps);
     labelcalStepsTotal.innerHTML = totalStepsDay;
-    labelcalStepsTotalPerc.innerHTML = totalstepsDayPerc+"%";
+    labelcalStepsTotalPerc.innerHTML = totalstepsDayPerc + "%";
     document.documentElement.style.setProperty("--percentageSteps", totalstepsDayPerc);
+}
+
+//Get the API address
+function getIPMainAddressAndLocation() {
+    const APIgetIPURL = "https://api.ipify.org/?format=json";
+    let myLocalIP = "";
+    let myCity = "";
+    let myRegion = "";
+    let APIgetLocationURL = "";
+    fetch(APIgetIPURL)
+        .then((responseOK) => {
+            return responseOK.json();
+        })
+        .then((data) => {
+            myLocalIP = data.ip;
+            console.log(myLocalIP.ip);
+        })
+        .catch((responseError) => {
+            console.log(responseError);
+        })
+    APIgetLocationURL = `https://ipinfo.io/${myLocalIP}/geo`;
+    fetch(APIgetLocationURL)
+        .then((responseOKLocation) => {
+            return responseOKLocation.json();
+        })
+        .then((dataLocation) => {
+            myCity = dataLocation.city;
+            myRegion = dataLocation.region;
+            labelmyCityLabelName.innerHTML = myCity;
+            labelmyRegionLabelName.innerHTML = myRegion;
+            console.log(myCity + " " + myRegion);
+        })
+        .catch((responseErrorLocation) => {
+            console.log(responseErrorLocation);
+        })
+
 }
 
 // Call functions
 populateLabels();
+getIPMainAddressAndLocation();
 localStorage.clear();

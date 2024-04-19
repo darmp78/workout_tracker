@@ -106,7 +106,7 @@ footer .icon-row .icon-social-media {
 footer .icon-row .icon-social-media:hover {
   color: #FE4A27;
 }
-footer p, footer .body-dashboard main .container-fluid div div .weather-container .p-secundary, .body-dashboard main .container-fluid div div .weather-container footer .p-secundary {
+footer p, footer .body-dashboard main .container-fluid div div .weather-container div .city-name-text .p-secundary, .body-dashboard main .container-fluid div div .weather-container div .city-name-text footer .p-secundary {
   color: #F0F0F0;
 }
 
@@ -147,13 +147,13 @@ footer p, footer .body-dashboard main .container-fluid div div .weather-containe
   padding: 20px 0 5px 30px;
   color: #FE4A27;
 }
-.body-dashboard main .container-fluid div .main-name-container .name-container p, .body-dashboard main .container-fluid div .main-name-container .name-container div .weather-container .p-secundary, .body-dashboard main .container-fluid div div .weather-container .main-name-container .name-container .p-secundary {
+.body-dashboard main .container-fluid div .main-name-container .name-container p, .body-dashboard main .container-fluid div .main-name-container .name-container div .weather-container div .city-name-text .p-secundary, .body-dashboard main .container-fluid div div .weather-container div .city-name-text .main-name-container .name-container .p-secundary {
   padding: 0 0 0px 30px;
   margin: 0;
   font-weight: 600;
   color: #3C3C3C;
 }
-.body-dashboard main .container-fluid div .main-name-container .name-container p .p-regular-font-weight, .body-dashboard main .container-fluid div .main-name-container .name-container div .weather-container .p-secundary .p-regular-font-weight, .body-dashboard main .container-fluid div div .weather-container .main-name-container .name-container .p-secundary .p-regular-font-weight {
+.body-dashboard main .container-fluid div .main-name-container .name-container p .p-regular-font-weight, .body-dashboard main .container-fluid div .main-name-container .name-container div .weather-container div .city-name-text .p-secundary .p-regular-font-weight, .body-dashboard main .container-fluid div div .weather-container div .city-name-text .main-name-container .name-container .p-secundary .p-regular-font-weight {
   font-weight: 200;
 }
 .body-dashboard main .container-fluid div .main-BMI-container {
@@ -176,7 +176,7 @@ footer p, footer .body-dashboard main .container-fluid div div .weather-containe
   color: #3C3C3C;
   margin: 0;
 }
-.body-dashboard main .container-fluid div .main-BMI-container .BMI-container p, .body-dashboard main .container-fluid div .main-BMI-container .BMI-container div .weather-container .p-secundary, .body-dashboard main .container-fluid div div .weather-container .main-BMI-container .BMI-container .p-secundary {
+.body-dashboard main .container-fluid div .main-BMI-container .BMI-container p, .body-dashboard main .container-fluid div .main-BMI-container .BMI-container div .weather-container div .city-name-text .p-secundary, .body-dashboard main .container-fluid div div .weather-container div .city-name-text .main-BMI-container .BMI-container .p-secundary {
   color: #3C3C3C;
   margin: 0;
 }
@@ -188,32 +188,37 @@ footer p, footer .body-dashboard main .container-fluid div div .weather-containe
   box-shadow: 10px 7px 24.9px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
 }
-.body-dashboard main .container-fluid div div .weather-container p, .body-dashboard main .container-fluid div div .weather-container .p-secundary {
+.body-dashboard main .container-fluid div div .weather-container p, .body-dashboard main .container-fluid div div .weather-container div .city-name-text .p-secundary {
   color: #3C3C3C;
   margin: 0;
   padding: 16px 0 0 0;
   font-weight: 600;
 }
-.body-dashboard main .container-fluid div div .weather-container p .fa-map-marker-alt, .body-dashboard main .container-fluid div div .weather-container .p-secundary .fa-map-marker-alt {
+.body-dashboard main .container-fluid div div .weather-container p .fa-map-marker-alt, .body-dashboard main .container-fluid div div .weather-container div .city-name-text .p-secundary .fa-map-marker-alt {
   color: #FE4A27;
 }
-.body-dashboard main .container-fluid div div .weather-container .img-weather, .body-dashboard main .container-fluid div div .weather-container .h1-weather-num {
+.body-dashboard main .container-fluid div div .weather-container div .city-name-img {
+  padding-top: 16px;
+  width: 40%;
+  text-align: end;
+}
+.body-dashboard main .container-fluid div div .weather-container div .city-name-img .img-city {
   display: inline;
-  margin: 0 16px;
+  scale: 1.1;
 }
-.body-dashboard main .container-fluid div div .weather-container .h1-weather-num {
-  vertical-align: middle;
-  font-size: 48px;
-  color: #3C3C3C;
+.body-dashboard main .container-fluid div div .weather-container div .city-name-text {
+  padding-top: 26px;
+  width: 60%;
 }
-.body-dashboard main .container-fluid div div .weather-container .p-secundary {
+.body-dashboard main .container-fluid div div .weather-container div .city-name-text .p-secundary {
   padding: 0;
+  text-align: justify;
 }
 .body-dashboard main .container-fluid div .main-table-workout-container {
   width: 66.7%;
   padding: 30px 10px;
 }
-.body-dashboard main .container-fluid div .main-table-workout-container p, .body-dashboard main .container-fluid div .main-table-workout-container div .weather-container .p-secundary, .body-dashboard main .container-fluid div div .weather-container .main-table-workout-container .p-secundary {
+.body-dashboard main .container-fluid div .main-table-workout-container p, .body-dashboard main .container-fluid div .main-table-workout-container div .weather-container div .city-name-text .p-secundary, .body-dashboard main .container-fluid div div .weather-container div .city-name-text .main-table-workout-container .p-secundary {
   margin: 0;
 }
 .body-dashboard main .container-fluid div .main-table-workout-container .add-new-workout-bar .form-control-select-input-md, .body-dashboard main .container-fluid div .main-table-workout-container .add-new-workout-bar div .main-container-login div .col-container-right-cont .form-control-text-input-md, .body-dashboard main .container-fluid div div .main-container-login div .col-container-right-cont .main-table-workout-container .add-new-workout-bar .form-control-text-input-md {
@@ -275,7 +280,7 @@ footer p, footer .body-dashboard main .container-fluid div div .weather-containe
   border: 1px solid #FE4A27;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #FE4A27;
 }
-.body-dashboard main .container-fluid div .main-table-workout-container p, .body-dashboard main .container-fluid div .main-table-workout-container div .weather-container .p-secundary, .body-dashboard main .container-fluid div div .weather-container .main-table-workout-container .p-secundary {
+.body-dashboard main .container-fluid div .main-table-workout-container p, .body-dashboard main .container-fluid div .main-table-workout-container div .weather-container div .city-name-text .p-secundary, .body-dashboard main .container-fluid div div .weather-container div .city-name-text .main-table-workout-container .p-secundary {
   padding: 10px 0;
 }
 .body-dashboard main .container-fluid div .main-table-workout-container .table-striped thead tr th {
@@ -315,7 +320,7 @@ footer p, footer .body-dashboard main .container-fluid div div .weather-containe
   color: #3C3C3C;
   margin: 0;
 }
-.body-dashboard main .container-fluid div .main-result-workout-container .result-workout-container p, .body-dashboard main .container-fluid div .main-result-workout-container .result-workout-container div .weather-container .p-secundary, .body-dashboard main .container-fluid div div .weather-container .main-result-workout-container .result-workout-container .p-secundary {
+.body-dashboard main .container-fluid div .main-result-workout-container .result-workout-container p, .body-dashboard main .container-fluid div .main-result-workout-container .result-workout-container div .weather-container div .city-name-text .p-secundary, .body-dashboard main .container-fluid div div .weather-container div .city-name-text .main-result-workout-container .result-workout-container .p-secundary {
   padding: 0;
   margin: 0;
   color: #3C3C3C;
@@ -341,11 +346,11 @@ footer p, footer .body-dashboard main .container-fluid div div .weather-containe
   display: inline;
   color: #FE4A27;
 }
-.body-dashboard main .container-fluid div .main-result-workout-container .result-workout-container .resultNum-main-container .resultNum-container .text-in p, .body-dashboard main .container-fluid div .main-result-workout-container .result-workout-container .resultNum-main-container .resultNum-container .text-in div .weather-container .p-secundary, .body-dashboard main .container-fluid div div .weather-container .main-result-workout-container .result-workout-container .resultNum-main-container .resultNum-container .text-in .p-secundary {
+.body-dashboard main .container-fluid div .main-result-workout-container .result-workout-container .resultNum-main-container .resultNum-container .text-in p, .body-dashboard main .container-fluid div .main-result-workout-container .result-workout-container .resultNum-main-container .resultNum-container .text-in div .weather-container div .city-name-text .p-secundary, .body-dashboard main .container-fluid div div .weather-container div .city-name-text .main-result-workout-container .result-workout-container .resultNum-main-container .resultNum-container .text-in .p-secundary {
   display: inline;
   color: #757575;
 }
-.body-dashboard main .container-fluid div .main-result-workout-container .result-workout-container .resultNum-main-container .resultNum-container .text-in p span, .body-dashboard main .container-fluid div .main-result-workout-container .result-workout-container .resultNum-main-container .resultNum-container .text-in div .weather-container .p-secundary span, .body-dashboard main .container-fluid div div .weather-container .main-result-workout-container .result-workout-container .resultNum-main-container .resultNum-container .text-in .p-secundary span {
+.body-dashboard main .container-fluid div .main-result-workout-container .result-workout-container .resultNum-main-container .resultNum-container .text-in p span, .body-dashboard main .container-fluid div .main-result-workout-container .result-workout-container .resultNum-main-container .resultNum-container .text-in div .weather-container div .city-name-text .p-secundary span, .body-dashboard main .container-fluid div div .weather-container div .city-name-text .main-result-workout-container .result-workout-container .resultNum-main-container .resultNum-container .text-in .p-secundary span {
   color: #3C3C3C;
 }
 .body-dashboard main .container-fluid div .main-result-workout-container .result-workout-container .resultNum-main-container .resultNum-container .text-out {
@@ -353,7 +358,7 @@ footer p, footer .body-dashboard main .container-fluid div div .weather-containe
   position: absolute;
   right: 30px;
 }
-.body-dashboard main .container-fluid div .main-result-workout-container .result-workout-container .resultNum-main-container .resultNum-container .text-out p, .body-dashboard main .container-fluid div .main-result-workout-container .result-workout-container .resultNum-main-container .resultNum-container .text-out div .weather-container .p-secundary, .body-dashboard main .container-fluid div div .weather-container .main-result-workout-container .result-workout-container .resultNum-main-container .resultNum-container .text-out .p-secundary {
+.body-dashboard main .container-fluid div .main-result-workout-container .result-workout-container .resultNum-main-container .resultNum-container .text-out p, .body-dashboard main .container-fluid div .main-result-workout-container .result-workout-container .resultNum-main-container .resultNum-container .text-out div .weather-container div .city-name-text .p-secundary, .body-dashboard main .container-fluid div div .weather-container div .city-name-text .main-result-workout-container .result-workout-container .resultNum-main-container .resultNum-container .text-out .p-secundary {
   display: inline;
   font-size: 18px;
 }
@@ -372,7 +377,7 @@ footer p, footer .body-dashboard main .container-fluid div div .weather-containe
 .body-dashboard .footer-dashboard .icon-row .icon-social-media:hover {
   color: #FE4A27;
 }
-.body-dashboard .footer-dashboard p, .body-dashboard .footer-dashboard main .container-fluid div div .weather-container .p-secundary, .body-dashboard main .container-fluid div div .weather-container .footer-dashboard .p-secundary {
+.body-dashboard .footer-dashboard p, .body-dashboard .footer-dashboard main .container-fluid div div .weather-container div .city-name-text .p-secundary, .body-dashboard main .container-fluid div div .weather-container div .city-name-text .footer-dashboard .p-secundary {
   color: #3C3C3C;
 }
 
